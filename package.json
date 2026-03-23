@@ -9,7 +9,6 @@
     "build:bun": "bun run build",
     "start": "next start",
     "start:bun": "bun run start",
-    "install": "bun install",
     "lint": "next lint"
   },
   "trustedDependencies": [
