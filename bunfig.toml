@@ -1,0 +1,15 @@
+[install]
+# 使用 Bun 作为包管理器
+auto = "fallback"
+
+[install.cache]
+# 缓存目录
+dir = ".bun-cache"
+
+[run]
+# Bun 运行时配置
+ bun = true
+
+[test]
+# 测试配置
+ bun = true
