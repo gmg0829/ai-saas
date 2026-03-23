@@ -10,8 +10,7 @@
     "start": "next start",
     "start:bun": "bun run start",
     "install": "bun install",
-    "lint": "next lint",
-    "postinstall": "bunx clerk(nextjs) setup"
+    "lint": "next lint"
   },
   "trustedDependencies": [
     "@clerk/nextjs",
