@@ -13,16 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          bun-version: latest
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
-        run: bun install
+        run: npm ci
 
       - name: Run lint
-        run: bun run lint
+        run: npm run lint
 
   type-check:
     name: Type Check
@@ -30,16 +31,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          bun-version: latest
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
-        run: bun install
+        run: npm ci
 
       - name: Type check
-        run: bun run type-check || npx tsc --noEmit
+        run: npx tsc --noEmit
 
   build:
     name: Build
@@ -47,18 +49,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          bun-version: latest
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
-        run: bun install
+        run: npm ci
 
       - name: Build
-        run: bun run build
+        run: npm run build
         env:
-          # Add required env vars for build
           NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
           CLERK_SECRET_KEY: ${{ secrets.CLERK_SECRET_KEY }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
