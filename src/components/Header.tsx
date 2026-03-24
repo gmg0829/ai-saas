@@ -31,6 +31,9 @@ export function Header({
             <Link href="/pricing" className="text-sm hover:text-gray-600">
               Pricing
             </Link>
+            <Link href="/subscribe" className="text-sm hover:text-gray-600">
+              Subscribe
+            </Link>
           </nav>
 
           <div className="flex items-center gap-4">

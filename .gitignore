@@ -1,41 +1,44 @@
 # Dependencies
 node_modules/
-.bun-cache/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
 
 # Next.js
 .next/
 out/
 
 # Production
-build/
-dist/
+build
 
-# Environment
-.env
-.env.local
-.env.*.local
+# Misc
+.DS_Store
+*.pem
 
-# Logs
+# Debug
 npm-debug.log*
 yarn-debug.log*
-bun-debug.log*
+yarn-error.log*
 
-# Editor
-.vscode/
-.idea/
-*.swp
-*.swo
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Sentry
-.sentryclirc
+# Vercel
+.vercel
 
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
 
-# Misc
-*.pem
+# IDE
+.idea/
+.vscode/
+
+# Factory
+.factory/

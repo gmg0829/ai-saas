@@ -8,6 +8,7 @@ export default authMiddleware({
     "/api/webhooks(.*)",
     "/features",
     "/pricing",
+    "/subscribe",
     "/chat",
     "/write",
     "/summarize",
