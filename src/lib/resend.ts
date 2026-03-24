@@ -12,7 +12,7 @@ export async function sendEmail({
   html: string;
 }) {
   const { data, error } = await resend.emails.send({
-    from: "AI Tools Hub <noreply@aitools.com>",
+    from: "AI Tools Hub <onboarding@resend.dev>",
     to,
     subject,
     html,
