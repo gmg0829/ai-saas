@@ -16,26 +16,23 @@ export async function upsertVector({
   namespace?: string;
 }) {
   const index = pinecone.index(indexName);
-  await index.upsert(vectors, namespace);
+  await index.upsert(vectors);
 }
 
 export async function queryVector({
   indexName,
   vector,
   topK = 5,
-  namespace = "",
 }: {
   indexName: string;
   vector: number[];
   topK?: number;
-  namespace?: string;
 }) {
   const index = pinecone.index(indexName);
   const results = await index.query({
     vector,
     topK,
     includeMetadata: true,
-    namespace,
   });
   return results;
 }
