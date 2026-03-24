@@ -8,6 +8,9 @@ export default authMiddleware({
     "/api/webhooks(.*)",
     "/features",
     "/pricing",
+    "/chat",
+    "/write",
+    "/summarize",
   ],
   ignoredRoutes: ["/api/webhooks(.*)"],
 });
