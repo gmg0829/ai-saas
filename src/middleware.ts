@@ -6,6 +6,7 @@ export default authMiddleware({
     "/sign-in(.*)",
     "/sign-up(.*)",
     "/api/webhooks(.*)",
+    "/api/subscribe",
     "/features",
     "/pricing",
     "/subscribe",
