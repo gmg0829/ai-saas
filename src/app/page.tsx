@@ -116,7 +116,7 @@ export default async function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-              Everything you need, nothing you don't
+              Everything you need, nothing you don&apos;t
             </h2>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
               Three powerful AI tools designed to supercharge your productivity
@@ -204,7 +204,7 @@ export default async function Home() {
                 Ready to boost your productivity?
               </h2>
               <p className="mt-4 text-lg leading-8 text-indigo-100">
-                Join thousands of users who've already transformed their workflow
+                Join thousands of users who&apos;ve already transformed their workflow
               </p>
             </div>
 
