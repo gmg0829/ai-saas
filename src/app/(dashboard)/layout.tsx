@@ -1,23 +1,13 @@
 import { Header } from "@/components/Header";
-
-async function getAuthUser() {
-  try {
-    const { auth, currentUser } = await import("@clerk/nextjs/server");
-    const { userId } = await auth();
-    const user = await currentUser();
-    return { userId, user };
-  } catch (error) {
-    console.error("Auth error:", error);
-    return { userId: null, user: null };
-  }
-}
+import { auth, currentUser } from "@clerk/nextjs/server";
 
 export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { userId, user } = await getAuthUser();
+  const { userId } = await auth();
+  const user = await currentUser();
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">

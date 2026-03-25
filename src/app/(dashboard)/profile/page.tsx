@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { currentUser } from "@clerk/nextjs/server";
+import { auth, currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import { getProfile, updateProfile } from "@/lib/supabase/profile";
+import { getProfile } from "@/lib/supabase/profile";
 import { ProfileForm } from "./profile-form";
 
 export const metadata: Metadata = {
@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default async function ProfilePage() {
-  const { auth, currentUser } = await import("@clerk/nextjs/server");
   const { userId } = await auth();
   const clerkUser = await currentUser();
 
