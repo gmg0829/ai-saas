@@ -59,6 +59,13 @@ export async function updateProfile(
   userId: string,
   updates: Partial<Profile>
 ): Promise<Profile | null> {
+  const existing = await getProfile(userId);
+  
+  if (!existing) {
+    // Create profile if doesn't exist
+    return createProfile(userId, updates);
+  }
+  
   const supabase = getSupabaseClient();
   const { data, error } = await supabase
     .from("profiles")
