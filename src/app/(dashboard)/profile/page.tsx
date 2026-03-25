@@ -11,6 +11,11 @@ export const metadata: Metadata = {
 
 export default async function ProfilePage() {
   const { userId } = await auth();
+  
+  if (!userId) {
+    redirect("/sign-in");
+  }
+  
   const clerkUser = await currentUser();
 
   if (!userId) {
