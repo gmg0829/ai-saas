@@ -1,4 +1,4 @@
-import { getSupabaseClient } from "./supabase";
+import { getSupabaseClient } from "../supabase";
 
 export interface Profile {
   id?: string;
