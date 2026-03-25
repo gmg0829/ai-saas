@@ -13,6 +13,7 @@ const isPublicRoute = createRouteMatcher([
 
 export default clerkMiddleware(async (auth, req) => {
   if (!isPublicRoute(req)) {
+    // @ts-expect-error - Clerk v5 types are incomplete
     await auth.protect();
   }
 });
