@@ -34,6 +34,11 @@ export function Header({
             <Link href="/subscribe" className="text-sm hover:text-gray-600">
               Subscribe
             </Link>
+            {userId && (
+              <Link href="/profile" className="text-sm hover:text-gray-600">
+                Profile
+              </Link>
+            )}
           </nav>
 
           <div className="flex items-center gap-4">
