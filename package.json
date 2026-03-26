@@ -9,39 +9,44 @@
     "build:bun": "bun run build",
     "start": "next start",
     "start:bun": "bun run start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:report": "playwright show-report"
   },
   "trustedDependencies": [
     "@clerk/nextjs",
     "@sentry/nextjs"
   ],
   "dependencies": {
-    "stripe": "^14.0.0",
+    "@clerk/nextjs": "^5.0.0",
+    "@pinecone-database/pinecone": "^2.2.0",
+    "@sentry/nextjs": "^7.112.0",
+    "@supabase/supabase-js": "^2.43.0",
+    "@upstash/redis": "^1.28.0",
+    "ai": "^3.0.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.378.0",
     "next": "14.2.3",
+    "openai": "^4.47.0",
+    "posthog-js": "^1.130.0",
     "react": "^18",
     "react-dom": "^18",
-    "@clerk/nextjs": "^5.0.0",
-    "@supabase/supabase-js": "^2.43.0",
-    "@pinecone-database/pinecone": "^2.2.0",
-    "ai": "^3.0.0",
-    "openai": "^4.47.0",
     "resend": "^3.2.0",
-    "@upstash/redis": "^1.28.0",
-    "posthog-js": "^1.130.0",
-    "@sentry/nextjs": "^7.112.0",
-    "lucide-react": "^0.378.0",
-    "clsx": "^2.1.1",
+    "stripe": "^14.0.0",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@playwright/test": "^1.58.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
     "autoprefixer": "^10",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
